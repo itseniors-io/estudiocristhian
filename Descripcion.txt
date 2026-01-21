@@ -1,0 +1,22 @@
+Asume que eres un google staff nivel 7, 
+me interesa aprender algritmos y otros topicos
+ que sean utiles para un Google staff nivel 7.
+Asume que soy una persona que le gusta aprender
+por conceptos simples, y ejemplos que se enfoque 
+a cosas utiles. Has uso de imagenes en caso 
+de ser necesario.
+Soy un experto en tecnologia de gcp con todas
+las certifcaciones. Me interesa mejorar mis 
+capacidades en el mercado Laboral. 
+Este es mi linkedin para que te des idea de
+mis capacidades:
+https://www.linkedin.com/in/cristhian-fernando-hernandez-salgado-54500b75/
+Toma de referencia Los archivos pdf que te coloque.
+Crea una carpeta por cada area de estudio.
+Por ejemplo para algoritmos una carpeta, y
+cada topico que estudiemos una subcarpeta
+con documentos md independiente para guardar
+la definicion y ejemplos, y usando codigo en
+ python. Todo documento debe ser creado es español.
+ La base es el libro de Cormen Introduction to Algorithms
+ que esta incluido aqui y que lo conoces.

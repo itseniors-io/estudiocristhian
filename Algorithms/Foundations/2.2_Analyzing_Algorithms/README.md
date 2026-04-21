@@ -28,3 +28,6 @@ Nos interesa la **tasa de crecimiento** del tiempo de ejecución a medida que $n
 - Ignoramos constantes y términos de orden inferior.
 - Un algoritmo con tiempo de ejecución $\Theta(n^2)$ (cuadrático) será eventualmente más lento que uno con $\Theta(n)$ (lineal) para un $n$ suficientemente grande.
 - Por ejemplo, **Insertion Sort** es $\Theta(n^2)$, mientras que **Merge Sort** es $\Theta(n \lg n)$.
+
+> [!TIP]
+> **Staff L7 Insight:** Debes recordar siempre con cautela que el Modelo formal Matemático "RAM" es ligeramente incompleto ante microarquitecturas Cloud Multicore modernas. Un simple análisis asintótico tradicional omite mortales factores como los "Cache Misses" de CPU L1/L2, o el temido Falso Intercambio (False-Sharing) en ambientes pesados multi-hilos (Multithreading Concurrency). Todo buen diseñador (Staff Level) justifica algoritmos asintóticamente primero, pero los instrumenta con perfiladores dinámicos tipo Google Pprof para detectar si quien realmente está asfixiando nuestra concurrencia es el Bus PCI-e en lugar de las líneas de código.

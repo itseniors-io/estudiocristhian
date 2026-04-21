@@ -13,6 +13,9 @@ Estos algoritmos suelen seguir el paradigma de "Divide y Vencerás", el cual inv
 2. **Conquer (Vencer)**: Resuelve los subproblemas de forma recursiva. Si el tamaño de los subproblemas es suficientemente pequeño, resuélvelos de manera directa (caso base).
 3. **Combine (Combinar)**: Combina las soluciones de los subproblemas en la solución del problema original.
 
+> [!TIP]
+> **Staff L7 Insight:** Entender matemáticamente el patrón recursivo de Divide y Vencerás es dominar el pilar madre histórico del diseño de Sistemas Distribuidos masivos at-scale: El **Modelo MapReduce** concebido originariamente en Google para domar Exabytes de datos webs dispersos. La fase de Divide es una paralelizacion feroz sobre miles de workers que mapean (*Mappers*); mientras que el bloque de "Combine" consolida los resultados fragmentados reduciendolos (*Reducers*) a tu salida final. Entender por qué el paradigma de un CPU funciona, modela exactamente cómo funciona la constelación de servidores de Datacenters interconectados.
+
 ## Ejemplo Central: Merge Sort (Ordenamiento por Mezcla)
 
 El algoritmo **Merge Sort** sigue fielmente el paradigma de Divide y Vencerás:

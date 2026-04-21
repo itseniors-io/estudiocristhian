@@ -52,6 +52,9 @@ En la ingeniería de sistemas distribuidos, rara vez implementamos un sort desde
 Lenguajes como Python (`sorted()`) y Java (`Arrays.sort()`) usan **Timsort**.
 *   **¿Qué es?** Un híbrido.
 *   **Estrategia**: Divide los datos en bloques pequeños. Usa **Insertion Sort** para esos bloques (porque es rápido en pequeña escala) y luego usa **Merge Sort** para unir esos bloques (porque escala bien).
+
+> [!TIP]
+> **Staff L7 Insight:** Las empresas de alto rango invierten millones diseñando algoritmos híbridos como TimSort simplemente porque saben que *el Mundo Real no es aleatorio*. En la vida productiva, el 80% de los arreglos o bases de datos que entran en una canalización (pipeline de datos) ya poseen ráfagas inmensas preordenadas debido a lógicas de timestamp o serialización. Un excelente Ingeniero de Staff asume las propiedades entrópicas de la estructura masiva original antes de rediseñar algoritmos puros de libro desde cero.
 *   **Lección L7**: No seas dogmático. La mejor solución suele ser una combinación de herramientas simples.
 
 ---

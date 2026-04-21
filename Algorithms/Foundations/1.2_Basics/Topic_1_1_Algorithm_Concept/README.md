@@ -35,6 +35,10 @@ No buscamos la fórmula matemática exacta, sino el **comportamiento a escala**.
 
 ### C. Trade-offs (Compromisos)
 Rara vez existe el algoritmo perfecto. Nuestro trabajo es negociar.
+
+> [!TIP]
+> **Staff L7 Insight:** "Optimizar ciegamente" a la máxima velocidad pura es un error junior. Los ingenieros nivel Staff en Amazon o Google saben que la Capa de Almacenamiento compite frecuentemente con la Capa Computacional en cuellos de botella reales; a veces, implementar un algoritmo $O(1)$ distribuyendo el estrés a un mega Clúster de Redis es *menos rentable* financieramente y más propenso a latencia por red, frente a permitirle internamente al microservicio procesar memoria RAM en una estructura $O(\log n)$. Mide siempre la relación Dólar vs Latencia.
+
 *   **Escenario**: Necesitamos búsquedas ultra-rápidas ($O(1)$).
 *   **Solución**: Usar un Hash Map (Diccionario) en memoria.
 *   **Costo (Trade-off)**: Consumo masivo de RAM.

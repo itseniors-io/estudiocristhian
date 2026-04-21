@@ -18,6 +18,9 @@ Para $f(n) = 3n^2 - 2n + 5$:
 - A medida que $n \to \infty$, el término $n^2$ domina al resto.
 - Por lo tanto, $f(n) = \Theta(n^2)$.
 
+> [!TIP]
+> **Staff L7 Insight:** En Big Tech (Google, AWS, Meta), la notación $\Theta$ determina viabilidad en el **Capacity Planning**. A escala planetaria, los factores constantes de desempeño del servidor se vuelven minúsculos comparados al volumen de los datos. Si tu pipeline de procesamiento masivo o validación distribuida es fundamentalmente $\Theta(n^2)$, fallará y experimentará cuellos de botella con seguridad matemática a bajo millares de nodos, sin importar qué tan optimizado esté el código o si programas en C++ o Rust en lugar de Python. 
+
 ---
 
 ## 2. Notación $O$ (Big-O) -> Cota Superior (Upper Bound)
@@ -30,6 +33,9 @@ $0 \leq f(n) \leq c \cdot g(n)$ para todo $n \geq n_0$.
 **Ejemplo:**
 Si un algoritmo toma $f(n) = 3n^2 - 2n + 5$ pasos, está limitado superiormente por $n^2$, así que $f(n) = O(n^2)$. Técnicamente, también es correcto decir que $f(n) = O(n^3)$ porque $n^3$ crece más rápido que $n^2$.
 
+> [!TIP]
+> **Staff L7 Insight:** Los ingenieros de nivel Staff se obsesionan particularmente con la cota Worst-Case $O(g(n))$ para poder proveer fiabilidad sistémica y **Service Level Objectives (SLOs) del Tail-Latency** (p.ej, el percentil p99.9). Los algoritmos que son extremadamente veloces "en promedio" pero poseen un peor caso severo pueden experimentar caídas catastróficas transitorias ('outages'). Por esto mismo Google suele evitar estrategias de Hash-table que caigan en clustering lineal lento, reemplazándolos con árboles u otras estructuras para evitar que un retraso inesperado demuela servicios de alta densidad en servidores Frontend de RPC síncronos.
+
 ---
 
 ## 3. Notación $\Omega$ (Big-Omega) -> Cota Inferior (Lower Bound)
@@ -41,6 +47,9 @@ $0 \leq c \cdot g(n) \leq f(n)$ para todo $n \geq n_0$.
 
 **Ejemplo:**
 Para el algoritmo de ordenamiento por inserción (insertion sort), el tiempo de ejecución en el mejor de los casos (cuando el arreglo ya está ordenado) es $\Omega(n)$.
+
+> [!TIP]
+> **Staff L7 Insight:** Manejar las cotas base $\Omega$ ahorra innumerables horas e inversiones erróneas de dinero en Google. Si entiendes que la arquitectura inter-continental de tu aplicación tiene una limitante $\Omega(n)$ física impuesta por la latencia del cable de fibra óptica y transferencia bruta de red, cierras cualquier debate engañoso de optimización en memoria RAM y de inmediato buscas rediseñar por completo la forma del negocio (procesan la data en el perímetro vía edge-computing, o aplican compresión delta superior), encriptandolo como "Límite Fundamental".
 
 ---
 

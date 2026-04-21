@@ -1,3 +1,7 @@
+# Para ejecutar este código usando el entorno virtual de la raíz del proyecto, usa:
+# source ../../../.venv/bin/activate && python3 plot_asymptotic.py
+# O alternativamente:
+# ../../../.venv/bin/python3 plot_asymptotic.py
 import matplotlib.pyplot as plt
 import numpy as np
 import os

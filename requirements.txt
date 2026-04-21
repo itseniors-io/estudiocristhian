@@ -1,0 +1,3 @@
+# Paquetes requeridos para ejecutar los scripts de este proyecto:
+matplotlib
+numpy
